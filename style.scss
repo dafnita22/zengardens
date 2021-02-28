@@ -130,8 +130,7 @@ footer {
 
 //Large
 @media only screen and(min-width:70rem) {
-    $text-color: hsl(0, 0%, 2%);
-    $h1-size: 55px;
+   
     html {
         margin: 0;
         padding: 0;
@@ -169,7 +168,7 @@ footer {
     header {
         font-size: larger;
         text-align: center;
-        background-color: rgb(62, 128, 82);
+        background-color: $header-color;
         grid-column: 2;
         grid-row: 1;
     }
