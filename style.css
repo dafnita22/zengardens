@@ -29,14 +29,13 @@
 }
 
 header {
-    height: 150px;
+    background-image: url('../zengardens/image/zen_background_small.jpg');
+    background-size: cover;
     padding: 1.8em;
     margin: 10px 0;
     border: 1px solid lightgrey;
 }
 section.intro {
-  background-image: url('../zengardens/image/zen_background_small.jpg');
-  background-size: cover;
   line-height: 1.2em;
 }
 
@@ -57,9 +56,15 @@ section.intro {
     padding: 10px;
     
 }
+aside.sidebar {
+  padding: 40px;
+  background-color: #e6e6e6;
+}
 
 footer {
     text-align: center;
+    background-color: #a1f3af;
+    height: 20px;
 }
 }
   @media only screen and (min-width: 35rem) {
