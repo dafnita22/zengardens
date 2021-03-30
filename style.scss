@@ -1,232 +1,260 @@
-@import 'partials/mixins';
-@import 'partials/variables';
-
-//small
-@media only screen and (max-width: 35rem) {
-  
-    h1::before {
-      display: inline-block;
-      position: relative;
-      content: "";
-      width: 100px;
-      height: 100px;
-      background: url("image/favicon_1.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-  
-    h2::before {
-      content: " ";
-      padding: 50px;
-    }
-  body {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-      
-}
-
-header {
-    background-image: url('../zengardens/image/zen_background_small.jpg');
-    background-size: cover;
-    padding: 1.8em;
-    margin: 10px 0;
-    border: 1px solid lightgrey;
-}
-section.intro {
-  line-height: 1.2em;
-}
-
-.intro h2 {
-    font-size: 1em;
-}
-
-
-.intro div , footer {
-    border: 1px solid lightgrey;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-.explanation , .participation , .benefits , .requirements {
-    border: 1px solid lightgrey;
-    margin: 10px 0;
-    padding: 10px;
-    
-}
-aside.sidebar {
-  padding: 40px;
-  background-color: $typo-color;
-}
-
-footer {
-    text-align: center;
-    background-color: #a1f3af;
-    height: 20px;
-}
-}
-
-// Medium
-@media only screen and (min-width: 35rem) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    h1,
-    h2 {
-        text-transform: uppercase;
-    }
-    h1::before {
-        @include add-image(100px, 100px, "image/favicon_1.png");
-    }
-    h2::before {
-        content: " ";
-        padding: 50px;
-    }
-    div.page-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0;
-    }
-    section.intro {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        padding: 40px;
-        text-align: center;
-        background: url(image/zen_background_small.jpg);
-        background-size: cover;
-    }
-    div.main,
-    zen-supporting {
-        padding: 60px;
-        background: $background-color;
-        footer,
-        div.requirements p:last-child {
+    @import 'partials/mixins';
+    @import 'partials/variables';
+    @import 'partials/typography';
+    //small
+    @media only screen and (max-width: 35rem) {
+        h1::before {
+            display: inline-block;
+            position: relative;
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: url("image/favicon_1.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h2::before {
+            content: " ";
+            padding: 50px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        header {
+            background-image: url('../zengardens/image/zen_background_small.jpg');
+            background-size: cover;
+            padding: 1.8em;
+            margin: 10px 0;
+            border: 1px solid lightgrey;
+        }
+        section.intro {
+            line-height: 1.2em;
+        }
+        .intro h2 {
+            font-size: 1em;
+        }
+        .intro div,
+        footer {
+            border: 1px solid lightgrey;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .explanation,
+        .participation,
+        .benefits,
+        .requirements {
+            border: 1px solid lightgrey;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        aside.sidebar {
+            padding: 40px;
+            background-color: $typo-color;
+        }
+        footer {
             text-align: center;
+            background-color: #a1f3af;
+            height: 20px;
         }
     }
-    aside.sidebar {
-        padding: 40px;
-        grid-column: 1/2;
-        grid-row: 1/3;
-        background-color: $typo-color;
-    }
-    ul {
-        list-style-type: none;
-        display: inline;
-        margin: 0;
-        padding: 0;
-    }
-    .design-name {
-        margin: 0;
-        padding: 0;
-        display: block;
-    }
-    .designer-name {
-        margin-bottom: 200px;
-    }
-}
-
-//Large
-@media only screen and(min-width:70rem) {
-   
-    html {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        font: 75% georgia, sans-serif;
-        line-height: 1.88889;
-        color: $text-color;
-        background: #f5f0f0 url(/Zen_Gardens/css/img/zen_background_small.jpg) no-repeat;
-        background-size: 2500px 900px;
-        margin: 0;
-        text-align: center;
-        width: 70%;
-        padding: 15px;
-    }
-    h1 {
-        font-size: $h1-size;
-        margin-bottom: 0;
-    }
-    h2 {
-        margin-top: 0;
-    }
-    .page-wrapper {
-        position: absolute;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px 41px;
-        height: 300px;
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .intro {
-        position: unset;
-        grid-column-end: 1/span 2;
-    }
-    header {
-        font-size: larger;
-        text-align: center;
-        background-color: $header-color;
-        grid-column: 2;
-        grid-row: 1;
-    }
-    .summary {
-        text-align: center;
-        grid-row: 2;
-        grid-column: 1/ span 2;
-        border: 1px solid powderblue;
-    }
-    .preamble {
-        background-color: rgb(186, 231, 231);
-        text-align: center;
-        grid-row: 2;
-    }
-    .main,
-    zen-supporting {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 41px;
-    }
-    .explanation {
-        background-color: #eca7a7;
-    }
-    .participation {
-        grid-column: 1;
-        grid-row: 2;
-        position: relative;
-        grid-template-rows: subgrid;
-        background-color: antiquewhite;
-    }
-    .benefits {
-        grid-column: 2;
-        grid-row: 1;
-        background-color: rgb(99, 240, 240);
-    }
-    .requirements {
-        grid-row: 2;
-        grid-column: 2;
-        background-color: rgb(133, 203, 235);
-    }
-    footer {
-        grid-column: 1/span 2;
-        grid-row: 5;
-        background-color: rgb(161, 243, 175);
-        text-align: center;
-        height: 40px;
-    }
-    /* I put this comment out - because it wraps to the side, and not bottom 
-    .wrapper {
-        text-align: center;
-        display: grid;
-        grid-area: auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+    
+    // Medium
+    @media only screen and (min-width: 35rem) {
+        h1 {
+            font-size: 2.5rem;
+        }
+        h1,
+        h2 {
+            text-transform: uppercase;
+        }
+        h1::before {
+            @include add-image(100px,
+            100px,
+            "image/favicon_1.png");
+        }
+        h2::before {
+            content: " ";
+            padding: 50px;
+        }
+        div.page-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        section.intro {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            padding: 40px;
+            text-align: center;
+            background: url(image/zen_background_small.jpg);
+            background-size: cover;
+        }
+        div.main,
+        zen-supporting {
+            padding: 60px;
+            background: $background-color;
+            footer,
+            div.requirements p:last-child {
+                text-align: center;
+            }
+        }
+        aside.sidebar {
+            padding: 40px;
+            grid-column: 1/2;
+            grid-row: 1/3;
+            background-color: $typo-color;
+        }
         ul {
             list-style-type: none;
+            display: inline;
+            margin: 0;
+            padding: 0;
         }
-    }*/
-}
-
+        .design-name {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+        .designer-name {
+            margin-bottom: 200px;
+        }
+    }
+    
+    //Large
+    @media only screen and(min-width:70rem) {
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 75% georgia, sans-serif;
+            line-height: 1.88889;
+            color: $text-color;
+            background: #aaebd2 url(/Zen_Gardens/css/img/zen_background_small.jpg) no-repeat;
+            background-size: 2500px 900px;
+            margin: 0;
+            text-align: center;
+            width: 70%;
+            padding: 15px;
+        }
+        h1 {
+            font-size: $h1-size;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 35px;
+            font-family: cursive;
+        }
+        h3 {
+            font-size: 25px;
+            color: #06310a;
+        }
+        p {
+            font-size: 13px;
+            text-align: center;
+        }
+        .page-wrapper {
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px 41px;
+            height: 300px;
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .intro {
+            position: unset;
+            grid-column-end: 1/span 2;
+        }
+        header {
+            font-size: larger;
+            text-align: center;
+            background-color: $header-color;
+            grid-column: 2;
+            grid-row: 1;
+            border-radius: 10px;
+        }
+        .summary {
+            text-align: center;
+            grid-row: 2;
+            grid-column: 1/ span 2;
+            border: 1px solid powderblue;
+            margin-bottom: 20px;
+            background-color: #c3fac8;
+            border-radius: 10px;
+        }
+        .preamble {
+            background-color: rgb(186, 231, 231);
+            text-align: center;
+            grid-row: 2;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .main,
+        zen-supporting {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 41px;
+            border-radius: 10px;
+        }
+        .explanation {
+            background-color: #eca7a7;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .participation {
+            grid-column: 1;
+            grid-row: 2;
+            position: relative;
+            grid-template-rows: subgrid;
+            background-color: rgb(240, 219, 192);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .benefits {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: rgb(99, 240, 240);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .requirements {
+            grid-row: 2;
+            grid-column: 2;
+            background-color: rgb(133, 203, 235);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1/span 2;
+            grid-row: 5;
+            background-color: rgb(161, 243, 175);
+            text-align: center;
+            font-size: 30px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        /* I put this comment out - because it wraps to the side, and not bottom */
+        .wrapper {
+            text-align: center;
+            display: grid;
+            grid-area: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            border-radius: 10px;
+            text-align: left;
+            padding: 15px;
+            background-color: #c1ddbc;
+            ul {
+                list-style-type: none;
+            }
+        }
+    }

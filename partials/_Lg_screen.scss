@@ -1,6 +1,7 @@
 @media only screen and(max-width: 800px) {
     $text-color: hsl(0, 0%, 2%);
     $h1-size: 55px;
+    $font-type: $font;
     html {
         margin: 0;
         padding: 0;
@@ -22,7 +23,7 @@
     }
     h2 {
         margin-top: 0;
-        font-size: 30px;
+        font-family: $font-type;
     }
     .page-wrapper {
         position: absolute;
