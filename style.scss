@@ -1,6 +1,5 @@
     @import 'partials/mixins';
     @import 'partials/variables';
-    @import 'partials/typography';
     //small
     @media only screen and (max-width: 35rem) {
         h1::before {
@@ -21,9 +20,9 @@
             display: flex;
             flex-direction: column;
             background-color: white;
+            background-image: url('../zengardens/image/zen_background_small.jpg');
         }
         header {
-            background-image: url('../zengardens/image/zen_background_small.jpg');
             background-size: cover;
             padding: 1.8em;
             margin: 10px 0;
@@ -133,8 +132,8 @@
             font: 75% georgia, sans-serif;
             line-height: 1.88889;
             color: $text-color;
-            background: #aaebd2 url(/Zen_Gardens/css/img/zen_background_small.jpg) no-repeat;
             background-size: 2500px 900px;
+            background-color: $body-color;
             margin: 0;
             text-align: center;
             width: 70%;
@@ -143,21 +142,23 @@
         }
         h1 {
             font-size: $h1-size;
-            font-family: $font-family-h1;
+            font-family: $font-h2;
             margin-bottom: 0;
             font-weight: 700;
+            text-transform: to-lower-case($string: "");
         }
         h2 {
             margin-top: 0;
             font-size: 35px;
-            font-family: cursive;
+            font-family: $font-h2;
         }
         h3 {
             font-size: 25px;
+            font-family: $font-h3;
             color: #06310a;
         }
         p {
-            font-size: 13px;
+            font-size: 16px;
             text-align: center;
         }
         .page-wrapper {
@@ -171,6 +172,7 @@
         .intro {
             position: unset;
             grid-column-end: 1/span 2;
+            border-radius: 15px;
         }
         header {
             font-size: larger;
@@ -241,6 +243,13 @@
             height: 40px;
             padding: 10px;
             border-radius: 10px;
+            margin-bottom: 15px;
+            a {
+                color: #000;
+            }
+            a:hover {
+                color: $hover-color;
+            }
         }
         /* I put this comment out - because it wraps to the side, and not bottom */
         .wrapper {

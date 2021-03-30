@@ -1,17 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Sawarabi+Mincho&display=swap');
 // Variables
 $header-color: #3e8052;
 $typo-color: #e6e6e6;
 $background-color: #ffffff;
-$text-color: hsl(0, 0%, 2%);
+$text-color: hsl(0,
+0%,
+2%);
+$hover-color:red;
 $h1-size: 55px;
 $font-family-h1: 'Fondamento',
 cursive;
 //section colors
+$body-color:#9bcfa0;
 $side-color:#66ad72;
 $summary-color:#c3fac8;
-$preamble-color:rgb(186, 231, 231);
+$preamble-color:rgb(186,
+231,
+231);
 $explanation-color:#eca7a7;
-$participation-color:rgb(240, 219, 192);
-$benefits-color:rgb(99, 240, 240);
-$require-color:rgb(133, 203, 235);
-$footer-color:rgb(161, 243, 175);
+$participation-color:rgb(240,
+219,
+192);
+$benefits-color:rgb(99,
+240,
+240);
+$require-color:rgb(133,
+203,
+235);
+$footer-color:rgb(147,
+206,
+157);
+//font h1
+$font-h1: 'Fondamento'; // I put h2 for main font looked better
+$font-h2:'El Messiri',
+sans-serif;
+$font-h3: 'Sawarabi Mincho',
+sans-serif;
