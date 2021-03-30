@@ -130,7 +130,7 @@
         }
         body {
             font: 75% georgia, sans-serif;
-            line-height: 1.88889;
+            line-height: 1.4;
             color: $text-color;
             background-size: 2500px 900px;
             background-color: $body-color;
@@ -233,6 +233,11 @@
             background-color: $require-color;
             padding: 10px;
             border-radius: 10px;
+        }
+        .contentinfo {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-column: 1fr;
         }
         footer {
             grid-column: 1/span 2;

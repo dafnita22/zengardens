@@ -153,7 +153,7 @@ zen-supporting div.requirements p:last-child {
 
   body {
     font: 75% georgia, sans-serif;
-    line-height: 1.88889;
+    line-height: 1.4;
     color: #050505;
     background-size: 2500px 900px;
     background-color: #9bcfa0;
@@ -165,7 +165,7 @@ zen-supporting div.requirements p:last-child {
   }
 
   h1 {
-    font-size: 55px;
+    font-size: 80px;
     font-family: "El Messiri", sans-serif;
     margin-bottom: 0;
     font-weight: 700;
@@ -270,6 +270,12 @@ zen-supporting {
     background-color: #85cbeb;
     padding: 10px;
     border-radius: 10px;
+  }
+
+  .contentinfo {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-column: 1fr;
   }
 
   footer {
