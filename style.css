@@ -302,8 +302,8 @@ zen-supporting .requirements {
   .page-wrapper {
     position: absolute;
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px 41px;
     height: 300px;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -418,6 +418,7 @@ zen-supporting .requirements {
     border-radius: 10px;
     font-size: 16px;
     text-align: left;
+    width: 200px;
     padding: 15px;
     background-color: #66ad72;
   }
@@ -433,6 +434,7 @@ zen-supporting .requirements {
 
   .aside.sidebar {
     background-color: #c3fac8;
+    padding: 35px;
   }
 
   /* Shape Flower & Transitions */
