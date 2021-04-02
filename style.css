@@ -71,7 +71,7 @@ footer {
   body {
     line-height: 1.4;
     color: #050505;
-    background-color: #9bcfa0;
+    background-color: #b0ecb6;
     margin: 0;
     text-align: center;
     padding: 15px;
@@ -111,7 +111,7 @@ footer {
   header {
     font-size: larger;
     text-align: center;
-    background-color: #a1ddb3;
+    background-color: #9adaad;
     border-radius: 10px;
   }
 
@@ -233,7 +233,7 @@ zen-supporting .requirements {
     color: #000;
   }
   footer a:hover {
-    color: red;
+    color: #b61717;
   }
 
   .wrapper {
@@ -268,7 +268,7 @@ zen-supporting .requirements {
     line-height: 1.4;
     color: #050505;
     background-size: 2500px 900px;
-    background-color: #9bcfa0;
+    background-color: #b0ecb6;
     margin: 0;
     text-align: center;
     padding: 15px;
@@ -318,7 +318,7 @@ zen-supporting .requirements {
   header {
     font-size: larger;
     text-align: center;
-    background-color: #a1ddb3;
+    background-color: #9adaad;
     grid-column: 2;
     grid-row: 1;
     border-radius: 10px;
@@ -406,7 +406,7 @@ zen-supporting .requirements {
     color: #000;
   }
   footer a:hover {
-    color: red;
+    color: #b61717;
   }
 
   /* I put this comment out - because it wraps to the side, and not bottom */
