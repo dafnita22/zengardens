@@ -153,39 +153,39 @@ footer {
 zen-supporting {
     background: #ffffff;
     display: grid;
-    grid-row: 1fr 1fr 1fr 1fr;
-    gap: 20px 41px;
+    grid-template-columns: 1fr;
+    padding: 15px;
     margin-bottom: 35px;
     border-radius: 10px;
-  }
-  div.main footer,
-div.main div.requirements p:last-child,
-zen-supporting footer,
-zen-supporting div.requirements p:last-child {
-    text-align: center;
   }
   div.main .explanation,
 zen-supporting .explanation {
     grid-row: 1;
     background-color: #eca7a7;
     padding: 10px;
+    margin-bottom: 35px;
     border-radius: 10px;
   }
   div.main .participation,
 zen-supporting .participation {
     grid-row: 2;
+    margin-bottom: 35px;
     background-color: #f0dbc0;
     padding: 10px;
     border-radius: 10px;
   }
   div.main .benefits,
 zen-supporting .benefits {
+    grid-row: 3;
+    margin-bottom: 35px;
     background-color: #63f0f0;
     padding: 10px;
     border-radius: 10px;
   }
   div.main .requirements,
 zen-supporting .requirements {
+    grid-row: 4;
+    margin-bottom: 35px;
     background-color: #85cbeb;
     padding: 10px;
     border-radius: 10px;

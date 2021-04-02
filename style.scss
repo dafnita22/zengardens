@@ -136,32 +136,34 @@
         zen-supporting {
             background: $background-color;
             display: grid;
-            grid-row: 1fr 1fr 1fr 1fr;
-            gap: 20px 41px;
+            grid-template-columns: 1fr;
+            padding: 15px;
             margin-bottom: 35px;
             border-radius: 10px;
-            footer,
-            div.requirements p:last-child {
-                text-align: center;
-            }
             .explanation {
                 grid-row: 1;
                 background-color: $explanation-color;
                 padding: 10px;
+                margin-bottom: 35px;
                 border-radius: 10px;
             }
             .participation {
                 grid-row: 2;
+                margin-bottom: 35px;
                 background-color: $participation-color;
                 padding: 10px;
                 border-radius: 10px;
             }
             .benefits {
+                grid-row: 3;
+                margin-bottom: 35px;
                 background-color: $benefits-color;
                 padding: 10px;
                 border-radius: 10px;
             }
             .requirements {
+                grid-row: 4;
+                margin-bottom: 35px;
                 background-color: $require-color;
                 padding: 10px;
                 border-radius: 10px;
