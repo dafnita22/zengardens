@@ -1,29 +1,39 @@
-@media only screen and(max-width: 800px) {
-    $text-color: hsl(0, 0%, 2%);
-    $h1-size: 55px;
-    $font-type: $font;
+@media only screen and(min-width:70rem) {
     html {
         margin: 0;
         padding: 0;
     }
     body {
-        font: 75% georgia, sans-serif;
-        line-height: 1.88889;
+        line-height: 1.4;
         color: $text-color;
-        background: #e7e1e1 url(/Zen_Gardens/css/img/zen_background_small.jpg) no-repeat;
         background-size: 2500px 900px;
+        background-color: $body-color;
         margin: 0;
         text-align: center;
         width: 70%;
         padding: 15px;
+        border-radius: 15px;
     }
     h1 {
         font-size: $h1-size;
+        font-family: $font-h2;
         margin-bottom: 0;
+        font-weight: 700;
+        text-transform: to-lower-case($string: "");
     }
     h2 {
         margin-top: 0;
-        font-family: $font-type;
+        font-size: 35px;
+        font-family: $font-h2;
+    }
+    h3 {
+        font-size: 25px;
+        font-family: $font-h3;
+        color: #06310a;
+    }
+    p {
+        font-size: 16px;
+        text-align: center;
     }
     .page-wrapper {
         position: absolute;
@@ -36,24 +46,31 @@
     .intro {
         position: unset;
         grid-column-end: 1/span 2;
+        border-radius: 15px;
     }
     header {
         font-size: larger;
         text-align: center;
-        background-color: rgb(62, 128, 82);
+        background-color: $header-color;
         grid-column: 2;
         grid-row: 1;
+        border-radius: 10px;
     }
     .summary {
         text-align: center;
         grid-row: 2;
         grid-column: 1/ span 2;
         border: 1px solid powderblue;
+        margin-bottom: 20px;
+        background-color: $summary-color;
+        border-radius: 10px;
     }
     .preamble {
-        background-color: rgb(186, 231, 231);
+        background-color: $preamble-color;
         text-align: center;
         grid-row: 2;
+        padding: 10px;
+        border-radius: 10px;
     }
     .main,
     zen-supporting {
@@ -61,39 +78,209 @@
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 41px;
+        border-radius: 10px;
     }
     .explanation {
-        background-color: #eca7a7;
+        background-color: $explanation-color;
+        padding: 10px;
+        border-radius: 10px;
     }
     .participation {
         grid-column: 1;
         grid-row: 2;
         position: relative;
         grid-template-rows: subgrid;
+        background-color: $participation-color;
+        padding: 10px;
+        border-radius: 10px;
     }
     .benefits {
         grid-column: 2;
         grid-row: 1;
+        background-color: $benefits-color;
+        padding: 10px;
+        border-radius: 10px;
     }
     .requirements {
         grid-row: 2;
         grid-column: 2;
+        background-color: $require-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .contentinfo {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-column: 1fr;
     }
     footer {
         grid-column: 1/span 2;
         grid-row: 5;
-        background-color: powderblue;
+        background-color: $footer-color;
         text-align: center;
+        font-size: 30px;
         height: 40px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        a {
+            color: #000;
+        }
+        a:hover {
+            color: $hover-color;
+        }
     }
+    /* I put this comment out - because it wraps to the side, and not bottom */
     .wrapper {
         text-align: center;
         display: grid;
         grid-area: auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: left;
+        padding: 15px;
+        background-color: $side-color;
         ul {
             list-style-type: none;
         }
+        a {
+            color: #000;
+        }
+        a:hover {
+            color: $require-color;
+        }
+    }
+    .aside.sidebar {
+        background-color: #c3fac8;
+    }
+    /* Shape Flower & Transitions */
+    .summary p abbr:before {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: 50px;
+        width: 40px;
+        height: 40px;
+        background: $explanation-color;
+        border-radius: 50px;
+        animation-name: l-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    .summary p abbr:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50px;
+        width: 40px;
+        height: 40px;
+        background: $explanation-color;
+        border-radius: 50px;
+        animation-name: l-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    .summary p:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 90px;
+        width: 40px;
+        height: 40px;
+        background: $explanation-color;
+        border-radius: 50px;
+        animation-name: r-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    .summary:before {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: 90px;
+        width: 40px;
+        height: 40px;
+        background: $explanation-color;
+        border-radius: 50px;
+        animation-name: r-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    .summary:after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        left: 72px;
+        width: 40px;
+        height: 40px;
+        background: yellow;
+        border-radius: 50px;
+        animation-name: c-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    @keyframes c-circle {
+        from {
+            left: 72px;
+            background-color: $preamble-color;
+        }
+        to {
+            left: 172px;
+        }
+    }
+    @keyframes r-circle {
+        from {
+            left: 90px;
+        }
+        to {
+            left: 190px;
+        }
+    }
+    @keyframes l-circle {
+        from {
+            left: 50px;
+        }
+        to {
+            left: 150px;
+        }
+    }
+    /* Display Icons */
+    .zen-github::before {
+        background: url("image/github.png");
+    }
+    .zen-accessibility::before {
+        background: url("image/accessibility.png");
+    }
+    .zen-license::before {
+        background: url("image/license.png");
+    }
+    .zen-validate-css::before {
+        background: url("image/css.png");
+    }
+    .zen-validate-html::before {
+        background: url("image/html.png");
+    }
+    .zen-github::before,
+    .zen-accessibility::before,
+    .zen-license::before,
+    .zen-validate-css::before,
+    .zen-validate-html::before {
+        display: inline-block;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: 35px;
+        margin-right: 10px;
+        content: " ";
+        padding: 12px;
     }
 }

@@ -68,13 +68,27 @@ footer {
   }
 }
 @media only screen and (min-width: 35rem) {
-  h1 {
-    font-size: 2.5rem;
+  body {
+    line-height: 1.4;
+    color: #050505;
+    background-color: #9bcfa0;
+    margin: 0;
+    text-align: center;
+    width: 90%;
+    padding: 15px;
+    border-radius: 15px;
   }
 
-  h1,
-h2 {
-    text-transform: uppercase;
+  h1 {
+    font-size: 3.5rem;
+    font-family: "El Messiri", sans-serif;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: "";
+  }
+
+  h1 {
+    text-transform: "";
   }
 
   h1::before {
@@ -91,11 +105,25 @@ h2 {
   h2::before {
     content: " ";
     padding: 50px;
+    font-size: 35px;
+    font-family: "El Messiri", sans-serif;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-family: "Sawarabi Mincho", sans-serif;
+    color: #06310a;
+  }
+
+  header {
+    font-size: larger;
+    text-align: center;
+    background-color: #3e8052;
+    border-radius: 10px;
   }
 
   div.page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 5fr;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -105,15 +133,36 @@ h2 {
     grid-column: 2/3;
     grid-row: 1/2;
     padding: 40px;
+    margin-bottom: 35px;
     text-align: center;
     background: url(image/zen_background_small.jpg);
     background-size: cover;
   }
+  section.intro .summary {
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1/span 2;
+    border: 1px solid powderblue;
+    margin-bottom: 20px;
+    background-color: #c3fac8;
+    border-radius: 10px;
+  }
+  section.intro .preamble {
+    background-color: #bae7e7;
+    text-align: center;
+    grid-row: 2;
+    padding: 10px;
+    border-radius: 10px;
+  }
 
   div.main,
 zen-supporting {
-    padding: 60px;
     background: #ffffff;
+    display: grid;
+    grid-row: 1fr 1fr 1fr 1fr;
+    gap: 20px 41px;
+    margin-bottom: 35px;
+    border-radius: 10px;
   }
   div.main footer,
 div.main div.requirements p:last-child,
@@ -121,11 +170,43 @@ zen-supporting footer,
 zen-supporting div.requirements p:last-child {
     text-align: center;
   }
+  div.main .explanation,
+zen-supporting .explanation {
+    grid-row: 1;
+    background-color: #eca7a7;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  div.main .participation,
+zen-supporting .participation {
+    grid-row: 2;
+    background-color: #f0dbc0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  div.main .benefits,
+zen-supporting .benefits {
+    background-color: #63f0f0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  div.main .requirements,
+zen-supporting .requirements {
+    background-color: #85cbeb;
+    padding: 10px;
+    border-radius: 10px;
+  }
 
   aside.sidebar {
     padding: 40px;
     grid-column: 1/2;
     grid-row: 1/3;
+  }
+
+  .contentinfo {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-column: 1fr;
   }
 
   ul {
@@ -143,6 +224,46 @@ zen-supporting div.requirements p:last-child {
 
   .designer-name {
     margin-bottom: 200px;
+  }
+
+  footer {
+    grid-column: 1/span 2;
+    grid-row: 5;
+    background-color: #93ce9d;
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  footer a {
+    color: #000;
+  }
+  footer a:hover {
+    color: red;
+  }
+
+  .wrapper {
+    text-align: center;
+    display: grid;
+    grid-area: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    padding: 15px;
+    background-color: #66ad72;
+  }
+  .wrapper ul {
+    list-style-type: none;
+  }
+  .wrapper a {
+    color: #000;
+  }
+  .wrapper a:hover {
+    color: #85cbeb;
   }
 }
 @media only screen and (min-width: 70rem) {
