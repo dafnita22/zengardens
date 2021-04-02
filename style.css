@@ -6,9 +6,10 @@
     display: inline-block;
     position: relative;
     content: "";
+    font-family: "El Messiri", sans-serif;
     width: 100px;
     height: 100px;
-    background: url("image/favicon_1.png");
+    background: url("image/plants logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -30,6 +31,8 @@
     padding: 1.8em;
     margin: 10px 0;
     border: 1px solid lightgrey;
+    background-color: #9adaad;
+    border-radius: 15px 50px 30px;
   }
 
   section.intro {
@@ -66,6 +69,44 @@ footer {
     background-color: #a1f3af;
     height: 20px;
   }
+  .zen-github::before {
+    background: url("image/github.png");
+  }
+
+  .zen-accessibility::before {
+    background: url("image/accessibility.png");
+  }
+
+  .zen-license::before {
+    background: url("image/license.png");
+  }
+
+  .zen-validate-css::before {
+    background: url("image/css.png");
+  }
+
+  .zen-validate-html::before {
+    background: url("image/html.png");
+  }
+
+  .zen-github::before,
+.zen-accessibility::before,
+.zen-license::before,
+.zen-validate-css::before,
+.zen-validate-html::before {
+    display: inline-block;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 15px;
+    margin-right: 10px;
+    content: " ";
+    padding: 12px;
+  }
+
+
 }
 @media only screen and (min-width: 35rem) {
   body {
@@ -540,6 +581,7 @@ zen-supporting .requirements {
     }
   }
   /* Display Icons */
+  
   .zen-github::before {
     background: url("image/github.png");
   }
