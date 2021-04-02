@@ -112,7 +112,7 @@ footer {
     font-size: larger;
     text-align: center;
     background-color: #9adaad;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
   }
 
   div.page-wrapper {
@@ -226,7 +226,7 @@ zen-supporting .requirements {
     font-size: 30px;
     height: 40px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
     margin-bottom: 15px;
   }
   footer a {
@@ -242,7 +242,7 @@ zen-supporting .requirements {
     grid-area: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
     font-size: 16px;
     text-align: left;
     padding: 15px;
@@ -321,7 +321,7 @@ zen-supporting .requirements {
     background-color: #9adaad;
     grid-column: 2;
     grid-row: 1;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
   }
 
   .summary {
@@ -399,7 +399,7 @@ zen-supporting .requirements {
     font-size: 30px;
     height: 40px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
     margin-bottom: 15px;
   }
   footer a {
@@ -416,7 +416,7 @@ zen-supporting .requirements {
     grid-area: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    border-radius: 10px;
+    border-radius: 15px 50px 30px;
     font-size: 16px;
     text-align: left;
     width: 200px;
