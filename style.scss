@@ -77,9 +77,9 @@
             font-weight: 700;
         }
         h1::before {
-            @include add-image(100px,
-            100px,
-            "image/favicon_1.png");
+            @include add-image(150px,
+            150px,
+            "image/plants logo.png");
         }
         h2 {
             margin-top: 0;
@@ -134,12 +134,14 @@
         //this is the second div with 4 divs 
         div.main,
         zen-supporting {
-            background: $background-color;
+            // background: $background-color;
             // display: grid;
             // grid-template-columns: 1fr;
             padding: 15px;
             margin-bottom: 35px;
             border-radius: 10px;
+            background: url(image/zen_background_small.jpg) repeat;
+            background-size: auto 850px;
             .explanation {
                 grid-row: 1;
                 background-color: $explanation-color;
