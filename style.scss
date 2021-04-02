@@ -417,4 +417,44 @@
             from {left: 50px;}
             to {left: 150px;}
         }
+
+        /* Display Icons */
+
+        .zen-github::before {
+            background: url("image/github.png");
+        }
+
+        .zen-accessibility::before {
+            background: url("image/accessibility.png");
+        }
+
+        .zen-license::before {
+            background: url("image/license.png");
+        }
+
+        .zen-validate-css::before {
+            background: url("image/css.png");
+        }
+
+        .zen-validate-html::before {
+            background: url("image/html.png");
+        }
+
+        .zen-github::before, 
+        .zen-accessibility::before,
+        .zen-license::before,
+        .zen-validate-css::before,
+        .zen-validate-html::before {
+            display: inline-block;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin-left: 35px;
+            margin-right: 10px;
+            content: " ";
+            padding: 12px;
+        }
+
     }
