@@ -117,6 +117,7 @@ footer {
 
   div.page-wrapper {
     display: grid;
+    grid-template-columns: 1fr 3fr;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -152,8 +153,6 @@ footer {
   div.main,
 zen-supporting {
     background: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr;
     padding: 15px;
     margin-bottom: 35px;
     border-radius: 10px;
@@ -176,7 +175,6 @@ zen-supporting .participation {
   }
   div.main .benefits,
 zen-supporting .benefits {
-    grid-row: 3;
     margin-bottom: 35px;
     background-color: #63f0f0;
     padding: 10px;
@@ -184,7 +182,6 @@ zen-supporting .benefits {
   }
   div.main .requirements,
 zen-supporting .requirements {
-    grid-row: 4;
     margin-bottom: 35px;
     background-color: #85cbeb;
     padding: 10px;
@@ -260,21 +257,19 @@ zen-supporting .requirements {
     color: #85cbeb;
   }
 }
-@media only screen and (min-width: 70rem) {
+@media only screen and (min-width: 55rem) {
   html {
     margin: 0;
     padding: 0;
   }
 
   body {
-    font: 75% georgia, sans-serif;
     line-height: 1.4;
     color: #050505;
     background-size: 2500px 900px;
     background-color: #9bcfa0;
     margin: 0;
     text-align: center;
-    width: 70%;
     padding: 15px;
     border-radius: 15px;
   }
@@ -349,19 +344,21 @@ zen-supporting .requirements {
   .main,
 zen-supporting {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 20px 41px;
     border-radius: 10px;
   }
-
-  .explanation {
+  .main .explanation,
+zen-supporting .explanation {
+    grid-column: 1;
+    grid-row: 1;
     background-color: #eca7a7;
     padding: 10px;
     border-radius: 10px;
   }
-
-  .participation {
+  .main .participation,
+zen-supporting .participation {
     grid-column: 1;
     grid-row: 2;
     position: relative;
@@ -370,16 +367,16 @@ zen-supporting {
     padding: 10px;
     border-radius: 10px;
   }
-
-  .benefits {
+  .main .benefits,
+zen-supporting .benefits {
     grid-column: 2;
     grid-row: 1;
     background-color: #63f0f0;
     padding: 10px;
     border-radius: 10px;
   }
-
-  .requirements {
+  .main .requirements,
+zen-supporting .requirements {
     grid-row: 2;
     grid-column: 2;
     background-color: #85cbeb;
