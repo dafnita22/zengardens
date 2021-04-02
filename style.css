@@ -257,7 +257,7 @@ zen-supporting .requirements {
     color: #85cbeb;
   }
 }
-@media only screen and (min-width: 55rem) {
+@media only screen and (min-width: 70rem) {
   html {
     margin: 0;
     padding: 0;
