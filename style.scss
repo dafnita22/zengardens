@@ -76,9 +76,6 @@
             margin-bottom: 0;
             font-weight: 700;
         }
-        h1 {
-            text-transform: "";
-        }
         h1::before {
             @include add-image(100px,
             100px,
