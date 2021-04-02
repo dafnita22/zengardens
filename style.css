@@ -322,6 +322,108 @@ zen-supporting {
   .aside.sidebar {
     background-color: #c3fac8;
   }
+
+  /* Shape Flower & Transitions */
+  .summary p abbr:before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-name: l-circle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+  }
+
+  .summary p abbr:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-name: l-circle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+  }
+
+  .summary p:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 90px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-name: r-circle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+  }
+
+  .summary:before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 90px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-name: r-circle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+  }
+
+  .summary:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 72px;
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    border-radius: 50px;
+    animation-name: c-circle;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes c-circle {
+    from {
+      left: 72px;
+      background-color: #bae7e7;
+    }
+    to {
+      left: 172px;
+    }
+  }
+  @keyframes r-circle {
+    from {
+      left: 90px;
+    }
+    to {
+      left: 190px;
+    }
+  }
+  @keyframes l-circle {
+    from {
+      left: 50px;
+    }
+    to {
+      left: 150px;
+    }
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

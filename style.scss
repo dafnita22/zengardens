@@ -1,5 +1,6 @@
     @import 'partials/mixins';
     @import 'partials/variables';
+
     //small
     @media only screen and (max-width: 35rem) {
         h1::before {
@@ -12,34 +13,41 @@
             background-repeat: no-repeat;
             background-size: 100%;
         }
+
         h2::before {
             content: " ";
             padding: 50px;
         }
+
         body {
             display: flex;
             flex-direction: column;
             background-color: white;
             background-image: url('../zengardens/image/zen_background_small.jpg');
         }
+
         header {
             background-size: cover;
             padding: 1.8em;
             margin: 10px 0;
             border: 1px solid lightgrey;
         }
+
         section.intro {
             line-height: 1.2em;
         }
+
         .intro h2 {
             font-size: 1em;
         }
+
         .intro div,
         footer {
             border: 1px solid lightgrey;
             margin: 10px 0;
             padding: 10px;
         }
+
         .explanation,
         .participation,
         .benefits,
@@ -48,31 +56,36 @@
             margin: 10px 0;
             padding: 10px;
         }
+
         aside.sidebar {
             padding: 40px;
             background-color: $typo-color;
         }
+
         footer {
             text-align: center;
             background-color: #a1f3af;
             height: 20px;
         }
     }
-    
+
     // Medium
     @media only screen and (min-width: 35rem) {
         h1 {
             font-size: 2.5rem;
         }
+
         h1,
         h2 {
             text-transform: uppercase;
         }
+
         h1::before {
             @include add-image(100px,
-            100px,
-            "image/favicon_1.png");
+                100px,
+                "image/favicon_1.png");
         }
+
         h2::before {
             content: " ";
             padding: 50px;
@@ -85,6 +98,7 @@
             margin: 0 auto;
             padding: 0;
         }
+
         section.intro {
             grid-column: 2/3;
             grid-row: 1/2;
@@ -93,42 +107,49 @@
             background: url(image/zen_background_small.jpg);
             background-size: cover;
         }
+
         div.main,
         zen-supporting {
             padding: 60px;
             background: $background-color;
+
             footer,
             div.requirements p:last-child {
                 text-align: center;
             }
         }
+
         aside.sidebar {
             padding: 40px;
             grid-column: 1/2;
             grid-row: 1/3;
         }
+
         ul {
             list-style-type: none;
             display: inline;
             margin: 0;
             padding: 0;
         }
+
         .design-name {
             margin: 0;
             padding: 0;
             display: block;
         }
+
         .designer-name {
             margin-bottom: 200px;
         }
     }
-    
+
     //Large
     @media only screen and(min-width:70rem) {
         html {
             margin: 0;
             padding: 0;
         }
+
         body {
             font: 75% georgia, sans-serif;
             line-height: 1.4;
@@ -141,6 +162,7 @@
             padding: 15px;
             border-radius: 15px;
         }
+
         h1 {
             font-size: $h1-size;
             font-family: $font-h2;
@@ -148,20 +170,24 @@
             font-weight: 700;
             text-transform: to-lower-case($string: "");
         }
+
         h2 {
             margin-top: 0;
             font-size: 35px;
             font-family: $font-h2;
         }
+
         h3 {
             font-size: 25px;
             font-family: $font-h3;
             color: #06310a;
         }
+
         p {
             font-size: 16px;
             text-align: center;
         }
+
         .page-wrapper {
             position: absolute;
             display: grid;
@@ -170,11 +196,13 @@
             height: 300px;
             grid-template-rows: repeat(3, 1fr);
         }
+
         .intro {
             position: unset;
             grid-column-end: 1/span 2;
             border-radius: 15px;
         }
+
         header {
             font-size: larger;
             text-align: center;
@@ -183,6 +211,7 @@
             grid-row: 1;
             border-radius: 10px;
         }
+
         .summary {
             text-align: center;
             grid-row: 2;
@@ -192,6 +221,7 @@
             background-color: $summary-color;
             border-radius: 10px;
         }
+
         .preamble {
             background-color: $preamble-color;
             text-align: center;
@@ -199,6 +229,7 @@
             padding: 10px;
             border-radius: 10px;
         }
+
         .main,
         zen-supporting {
             display: grid;
@@ -207,11 +238,13 @@
             gap: 20px 41px;
             border-radius: 10px;
         }
+
         .explanation {
             background-color: $explanation-color;
             padding: 10px;
             border-radius: 10px;
         }
+
         .participation {
             grid-column: 1;
             grid-row: 2;
@@ -221,6 +254,7 @@
             padding: 10px;
             border-radius: 10px;
         }
+
         .benefits {
             grid-column: 2;
             grid-row: 1;
@@ -228,6 +262,7 @@
             padding: 10px;
             border-radius: 10px;
         }
+
         .requirements {
             grid-row: 2;
             grid-column: 2;
@@ -235,11 +270,13 @@
             padding: 10px;
             border-radius: 10px;
         }
+
         .contentinfo {
             display: grid;
             grid-template-rows: 1fr;
             grid-column: 1fr;
         }
+
         footer {
             grid-column: 1/span 2;
             grid-row: 5;
@@ -250,13 +287,16 @@
             padding: 10px;
             border-radius: 10px;
             margin-bottom: 15px;
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $hover-color;
             }
         }
+
         /* I put this comment out - because it wraps to the side, and not bottom */
         .wrapper {
             text-align: center;
@@ -269,17 +309,112 @@
             text-align: left;
             padding: 15px;
             background-color: $side-color;
+
             ul {
                 list-style-type: none;
             }
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $require-color;
             }
         }
+
         .aside.sidebar {
             background-color: #c3fac8;
+        }
+
+        /* Shape Flower & Transitions */
+        .summary p abbr:before {
+            position: absolute;
+            content: "";
+            top: 40px;
+            left: 50px;
+            width: 40px;
+            height: 40px;
+            background: $explanation-color;
+            border-radius: 50px;
+            animation-name: l-circle;
+            animation-duration: 3s;  
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        .summary p abbr:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 50px;
+            width: 40px;
+            height: 40px;
+            background: $explanation-color;
+            border-radius: 50px;
+            animation-name: l-circle;
+            animation-duration: 3s;  
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        .summary p:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 90px;
+            width: 40px;
+            height: 40px;
+            background: $explanation-color;
+            border-radius: 50px;
+            animation-name: r-circle;
+            animation-duration: 3s;  
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        .summary:before {
+            position: absolute;
+            content: "";
+            top: 40px;
+            left: 90px;
+            width: 40px;
+            height: 40px;
+            background: $explanation-color;
+            border-radius: 50px;
+            animation-name: r-circle;
+            animation-duration: 3s;  
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        .summary:after {
+            position: absolute;
+            content: "";
+            top: 20px;
+            left: 72px;
+            width: 40px;
+            height: 40px;
+            background: yellow;
+            border-radius: 50px;
+            animation-name: c-circle;
+            animation-duration: 3s;  
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes c-circle {
+            from {left: 72px; background-color: $preamble-color;}
+            to {left: 172px;}
+        }
+
+        @keyframes r-circle {
+            from {left: 90px;}
+            to {left: 190px;}
+        }
+
+        @keyframes l-circle {
+            from {left: 50px;}
+            to {left: 150px;}
         }
     }
