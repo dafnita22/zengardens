@@ -9,3 +9,27 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+@mixin add-image-nourl($width, $height) {
+    display: inline-block;
+    position: relative;
+    content: "";
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@mixin transition($top, $left, $background) {
+    position: absolute;
+    content: "";
+    top: $top;
+    left: $left;
+    width: 40px;
+    height: 40px;
+    background: $background;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}

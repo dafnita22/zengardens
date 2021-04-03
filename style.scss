@@ -1,5 +1,6 @@
     @import 'partials/mixins';
     @import 'partials/variables';
+
     //small
     @media only screen and (max-width: 35rem) {
         h1::before {
@@ -12,34 +13,41 @@
             background-repeat: no-repeat;
             background-size: 100%;
         }
+
         h2::before {
             content: " ";
             padding: 50px;
         }
+
         body {
             display: flex;
             flex-direction: column;
             background-color: white;
             background-image: url('../zengardens/image/zen_background_small.jpg');
         }
+
         header {
             background-size: cover;
             padding: 1.8em;
             margin: 10px 0;
             border: 1px solid lightgrey;
         }
+
         section.intro {
             line-height: 1.2em;
         }
+
         .intro h2 {
             font-size: 1em;
         }
+
         .intro div,
         footer {
             border: 1px solid lightgrey;
             margin: 10px 0;
             padding: 10px;
         }
+
         .explanation,
         .participation,
         .benefits,
@@ -48,17 +56,58 @@
             margin: 10px 0;
             padding: 10px;
         }
+
         aside.sidebar {
             padding: 40px;
             background-color: $typo-color;
         }
+
         footer {
             text-align: center;
             background-color: #a1f3af;
             height: 20px;
         }
+
+        /* Display Icons and hide text */
+        .zen-github::before {
+            background: url("image/github.png");
+        }
+
+        .zen-accessibility::before {
+            background: url("image/accessibility.png");
+        }
+
+        .zen-license::before {
+            background: url("image/license.png");
+        }
+
+        .zen-validate-css::before {
+            background: url("image/css.png");
+        }
+
+        .zen-validate-html::before {
+            background: url("image/html.png");
+        }
+
+        .zen-github::before,
+        .zen-accessibility::before,
+        .zen-license::before,
+        .zen-validate-css::before,
+        .zen-validate-html::before {
+            margin-left: 10px;
+            margin-right: 10px;
+            @include add-image-nourl(25px, 25px);
+        }
+
+        .zen-github,
+        .zen-accessibility,
+        .zen-license,
+        .zen-validate-css,
+        .zen-validate-html {
+            font-size: 0;
+        }
     }
-    
+
     // Medium
     @media only screen and (min-width: 35rem) {
         body {
@@ -70,33 +119,39 @@
             padding: 15px;
             border-radius: 15px;
         }
+
         h1 {
             font-size: 2.5rem;
             font-family: $font-h2;
             margin-bottom: 0;
             font-weight: 700;
         }
+
         h1::before {
             @include add-image(150px,
-            150px,
-            "image/plants logo.png");
+                150px,
+                "image/plants logo.png");
         }
+
         h2 {
             margin-top: 0;
             font-size: 25px;
             font-family: $font-h2;
         }
+
         h3 {
             font-size: 18px;
             font-family: $font-h3;
             color: #06310a;
         }
+
         header {
             font-size: larger;
             text-align: center;
             background-color: $header-color;
             border-radius: 15px 50px 30px;
         }
+
         div.page-wrapper {
             display: grid;
             grid-template-columns: 1fr 3fr;
@@ -104,6 +159,7 @@
             margin: 0 auto;
             padding: 0;
         }
+
         section.intro {
             grid-column: 2/3;
             grid-row: 1/2;
@@ -113,6 +169,7 @@
             text-align: center;
             background: url(image/zen_background_small.jpg);
             background-size: cover;
+
             //nested with section intro for the two divs
             .summary {
                 text-align: center;
@@ -123,6 +180,7 @@
                 background-color: $summary-color;
                 border-radius: 10px;
             }
+
             .preamble {
                 background-color: $preamble-color;
                 text-align: center;
@@ -131,6 +189,7 @@
                 border-radius: 10px;
             }
         }
+
         //this is the second div with 4 divs 
         div.main,
         zen-supporting {
@@ -142,6 +201,7 @@
             border-radius: 10px;
             background: url(image/zen_background_small.jpg) repeat;
             background-size: auto 850px;
+
             .explanation {
                 grid-row: 1;
                 background-color: $explanation-color;
@@ -149,6 +209,7 @@
                 margin-bottom: 35px;
                 border-radius: 10px;
             }
+
             .participation {
                 grid-row: 2;
                 margin-bottom: 35px;
@@ -156,6 +217,7 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+
             .benefits {
                 //  grid-row: 3;
                 margin-bottom: 35px;
@@ -163,6 +225,7 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+
             .requirements {
                 //   grid-row: 4;
                 margin-bottom: 35px;
@@ -171,30 +234,36 @@
                 border-radius: 10px;
             }
         }
+
         aside.sidebar {
             padding: 40px;
             grid-column: 1/2;
             grid-row: 1/3;
         }
+
         .contentinfo {
             display: grid;
             grid-template-rows: 1fr;
             grid-column: 1fr;
         }
+
         ul {
             list-style-type: none;
             display: inline;
             margin: 0;
             padding: 0;
         }
+
         .design-name {
             margin: 0;
             padding: 0;
             display: block;
         }
+
         .designer-name {
             margin-bottom: 200px;
         }
+
         footer {
             grid-column: 1/span 2;
             grid-row: 5;
@@ -205,13 +274,16 @@
             padding: 10px;
             border-radius: 15px 50px 30px;
             margin-bottom: 15px;
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $hover-color;
             }
         }
+
         .wrapper {
             text-align: center;
             display: grid;
@@ -224,24 +296,67 @@
             text-align: left;
             padding: 15px;
             background-color: $side-color;
+
             ul {
                 list-style-type: none;
             }
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $require-color;
             }
         }
+
+        /* Display Icons and hide text */
+        .zen-github::before {
+            background: url("image/github.png");
+        }
+
+        .zen-accessibility::before {
+            background: url("image/accessibility.png");
+        }
+
+        .zen-license::before {
+            background: url("image/license.png");
+        }
+
+        .zen-validate-css::before {
+            background: url("image/css.png");
+        }
+
+        .zen-validate-html::before {
+            background: url("image/html.png");
+        }
+
+        .zen-github::before,
+        .zen-accessibility::before,
+        .zen-license::before,
+        .zen-validate-css::before,
+        .zen-validate-html::before {
+            margin-left: 10px;
+            margin-right: 10px;
+            @include add-image-nourl(35px, 35px);
+        }
+
+        .zen-github,
+        .zen-accessibility,
+        .zen-license,
+        .zen-validate-css,
+        .zen-validate-html {
+            font-size: 0;
+        }
     }
-    
+
     //Large
     @media only screen and(min-width:70rem) {
         html {
             margin: 0;
             padding: 0;
         }
+
         body {
             line-height: 1.4;
             color: $text-color;
@@ -252,6 +367,7 @@
             padding: 15px;
             border-radius: 15px;
         }
+
         h1 {
             font-size: $h1-size;
             font-family: $font-h2;
@@ -259,20 +375,24 @@
             font-weight: 700;
             text-transform: to-lower-case($string: "");
         }
+
         h2 {
             margin-top: 0;
             font-size: 35px;
             font-family: $font-h2;
         }
+
         h3 {
             font-size: 25px;
             font-family: $font-h3;
             color: #06310a;
         }
+
         p {
             font-size: 16px;
             text-align: center;
         }
+
         .page-wrapper {
             position: absolute;
             display: grid;
@@ -281,11 +401,13 @@
             height: 300px;
             grid-template-rows: repeat(3, 1fr);
         }
+
         .intro {
             position: unset;
             grid-column-end: 1/span 2;
             border-radius: 15px;
         }
+
         header {
             font-size: larger;
             text-align: center;
@@ -295,6 +417,7 @@
             //border-radius: 10px;
             border-radius: 15px 50px 30px;
         }
+
         .summary {
             text-align: center;
             grid-row: 2;
@@ -304,6 +427,7 @@
             background-color: $summary-color;
             border-radius: 10px;
         }
+
         .preamble {
             background-color: $preamble-color;
             text-align: center;
@@ -311,6 +435,7 @@
             padding: 10px;
             border-radius: 10px;
         }
+
         .main,
         zen-supporting {
             display: grid;
@@ -318,6 +443,7 @@
             grid-template-rows: 1fr 1fr;
             gap: 20px 41px;
             border-radius: 10px;
+
             .explanation {
                 grid-column: 1;
                 grid-row: 1;
@@ -325,6 +451,7 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+
             .participation {
                 grid-column: 1;
                 grid-row: 2;
@@ -334,6 +461,7 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+
             .benefits {
                 grid-column: 2;
                 grid-row: 1;
@@ -341,6 +469,7 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+
             .requirements {
                 grid-row: 2;
                 grid-column: 2;
@@ -349,11 +478,13 @@
                 border-radius: 10px;
             }
         }
+
         .contentinfo {
             display: grid;
             grid-template-rows: 1fr;
             grid-column: 1fr;
         }
+
         footer {
             grid-column: 1/span 2;
             grid-row: 5;
@@ -364,13 +495,16 @@
             padding: 10px;
             border-radius: 15px 50px 30px;
             margin-bottom: 15px;
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $hover-color;
             }
         }
+
         /* I put this comment out - because it wraps to the side, and not bottom */
         .wrapper {
             text-align: center;
@@ -385,146 +519,119 @@
             width: 200px;
             padding: 15px;
             background-color: $side-color;
+
             ul {
                 list-style-type: none;
             }
+
             a {
                 color: #000;
             }
+
             a:hover {
                 color: $require-color;
             }
         }
+
         .aside.sidebar {
             background-color: #c3fac8;
             padding: 35px;
         }
+
         /* Shape Flower & Transitions */
         .summary p abbr:before {
-            position: absolute;
-            content: "";
-            top: 40px;
-            left: 50px;
-            width: 40px;
-            height: 40px;
-            background: $explanation-color;
-            border-radius: 50px;
+            @include transition(40px,50px,$explanation-color);
             animation-name: l-circle;
-            animation-duration: 3s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
         }
+
         .summary p abbr:after {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 50px;
-            width: 40px;
-            height: 40px;
-            background: $explanation-color;
-            border-radius: 50px;
+            @include transition(0px,50px,$explanation-color);
             animation-name: l-circle;
-            animation-duration: 3s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
         }
+
         .summary p:before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 90px;
-            width: 40px;
-            height: 40px;
-            background: $explanation-color;
-            border-radius: 50px;
+            @include transition(0px,90px,$explanation-color);
             animation-name: r-circle;
-            animation-duration: 3s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
         }
+
         .summary:before {
-            position: absolute;
-            content: "";
-            top: 40px;
-            left: 90px;
-            width: 40px;
-            height: 40px;
-            background: $explanation-color;
-            border-radius: 50px;
+            @include transition(40px,90px,$explanation-color);
             animation-name: r-circle;
-            animation-duration: 3s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
         }
+
         .summary:after {
-            position: absolute;
-            content: "";
-            top: 20px;
-            left: 72px;
-            width: 40px;
-            height: 40px;
-            background: yellow;
-            border-radius: 50px;
+            @include transition(20px,72px,$flower-shape);
             animation-name: c-circle;
-            animation-duration: 3s;
-            animation-delay: 2s;
-            animation-fill-mode: backwards;
         }
+
         @keyframes c-circle {
             from {
                 left: 72px;
                 background-color: $preamble-color;
             }
+
             to {
                 left: 172px;
             }
         }
+
         @keyframes r-circle {
             from {
                 left: 90px;
             }
+
             to {
                 left: 190px;
             }
         }
+
         @keyframes l-circle {
             from {
                 left: 50px;
             }
+
             to {
                 left: 150px;
             }
         }
-        /* Display Icons */
+
+        /* Display Icons and hide text */
         .zen-github::before {
             background: url("image/github.png");
         }
+
         .zen-accessibility::before {
             background: url("image/accessibility.png");
         }
+
         .zen-license::before {
             background: url("image/license.png");
         }
+
         .zen-validate-css::before {
             background: url("image/css.png");
         }
+
         .zen-validate-html::before {
             background: url("image/html.png");
         }
+
         .zen-github::before,
         .zen-accessibility::before,
         .zen-license::before,
         .zen-validate-css::before,
         .zen-validate-html::before {
-            display: inline-block;
-            position: relative;
-            width: 10px;
-            height: 10px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            margin-left: 35px;
+            margin-left: 40px;
             margin-right: 10px;
-            content: " ";
-            padding: 12px;
+            @include add-image-nourl(35px, 35px);
+        }
+
+        .zen-github,
+        .zen-accessibility,
+        .zen-license,
+        .zen-validate-css,
+        .zen-validate-html {
+            font-size: 30px;
+            text-decoration: none;
         }
     }
