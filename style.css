@@ -2,37 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&family=Sawarabi+Mincho&display=swap");
 @media only screen and (max-width: 35rem) {
+  
+  h1  {
+    font-size: 1.8em;
+  }
+
   h1::before {
     display: inline-block;
     position: relative;
     content: "";
-    width: 100px;
-    height: 100px;
-    background: url("image/favicon_1.png");
+    width: 80px;
+    height: 80px;
+    background: url("image/plants logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
   h2::before {
     content: " ";
-    padding: 50px;
+    padding: 40px;
   }
 
   body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    background-image: url("../zengardens/image/zen_background_small.jpg");
+    margin: 10px;
+    padding: 10px;
   }
 
   header {
     background-size: cover;
-    padding: 1.8em;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid lightgrey;
     text-align: center;
     background-color: #9adaad;
-    border-radius: 15px 50px 30px;
+    border-radius: 10px 30px 20px;
   }
 
   section.intro {
@@ -59,11 +65,9 @@
 
   div.main,
   zen-supporting {
-      padding: 15px;
+      padding: 10px;
       margin-bottom: 35px;
       border-radius: 10px;
-      background: url(image/zen_background_small.jpg) repeat;
-      background-size: auto 850px;
     }
     div.main .explanation,
   zen-supporting .explanation {
@@ -113,15 +117,27 @@ footer {
     padding: 10px;
   }
 
+
+  .wrapper {
+    text-align: center;
+    border-radius: 15px 50px 30px;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    background-color: #66ad72;
+  }
+
   aside.sidebar {
-    padding: 40px;
-    background-color: #e6e6e6;
+    padding: 20px;
+    background-color: #c3fac8;
+    border-radius: 15px 50px 30px;
   }
  
   footer {
     text-align: center;
-    background-color: #a1f3af;
+    background-color: #c3fac8;
     height: 20px;
+    border-radius: 15px 50px 30px;
   }
 
   /* Display Icons and hide text */
@@ -168,6 +184,109 @@ footer {
 .zen-validate-html {
     font-size: 0;
   }
+
+/* Shape Flower & Transitions */
+.summary p abbr:before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background: #eca7a7;
+  border-radius: 50px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: l-circle;
+}
+
+.summary p abbr:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background: #eca7a7;
+  border-radius: 50px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: l-circle;
+}
+
+.summary p:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 90px;
+  width: 40px;
+  height: 40px;
+  background: #eca7a7;
+  border-radius: 50px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: r-circle;
+}
+
+.summary:before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: 90px;
+  width: 40px;
+  height: 40px;
+  background: #eca7a7;
+  border-radius: 50px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: r-circle;
+}
+
+.summary:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 72px;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  border-radius: 50px;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-name: c-circle;
+}
+
+@keyframes c-circle {
+  from {
+    left: 72px;
+    background-color: #bae7e7;
+  }
+  to {
+    left: 172px;
+  }
+}
+@keyframes r-circle {
+  from {
+    left: 90px;
+  }
+  to {
+    left: 190px;
+  }
+}
+@keyframes l-circle {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 150px;
+  }
+}
+
 }
 
 @media only screen and (min-width: 35rem) {
