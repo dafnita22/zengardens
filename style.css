@@ -30,6 +30,9 @@
     padding: 1.8em;
     margin: 10px 0;
     border: 1px solid lightgrey;
+    text-align: center;
+    background-color: #9adaad;
+    border-radius: 15px 50px 30px;
   }
 
   section.intro {
@@ -39,6 +42,60 @@
   .intro h2 {
     font-size: 1em;
   }
+
+  section.intro .summary {
+  border: 1px solid powderblue;
+  margin-bottom: 20px;
+  background-color: #c3fac8;
+  border-radius: 10px;
+  }
+
+  section.intro .preamble {
+    background-color: #bae7e7;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  div.main,
+  zen-supporting {
+      padding: 15px;
+      margin-bottom: 35px;
+      border-radius: 10px;
+      background: url(image/zen_background_small.jpg) repeat;
+      background-size: auto 850px;
+    }
+    div.main .explanation,
+  zen-supporting .explanation {
+      background-color: #eca7a7;
+      padding: 10px;
+      margin-bottom: 35px;
+      border-radius: 10px;
+    }
+    div.main .participation,
+  zen-supporting .participation {
+      margin-bottom: 35px;
+      background-color: #f0dbc0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    div.main .benefits,
+  zen-supporting .benefits {
+      margin-bottom: 35px;
+      background-color: #63f0f0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    div.main .requirements,
+  zen-supporting .requirements {
+      margin-bottom: 35px;
+      background-color: #85cbeb;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+
+
 
   .intro div,
 footer {
@@ -60,7 +117,7 @@ footer {
     padding: 40px;
     background-color: #e6e6e6;
   }
-
+ 
   footer {
     text-align: center;
     background-color: #a1f3af;
@@ -112,6 +169,7 @@ footer {
     font-size: 0;
   }
 }
+
 @media only screen and (min-width: 35rem) {
   body {
     line-height: 1.4;
