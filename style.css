@@ -655,8 +655,8 @@ zen-supporting .requirements {
 .zen-license::before,
 .zen-validate-css::before,
 .zen-validate-html::before {
-    margin-left: 40px;
-    margin-right: 10px;
+    margin-left: 22px;
+    margin-right: 5px;
     display: inline-block;
     position: relative;
     content: "";
