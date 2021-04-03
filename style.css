@@ -347,6 +347,108 @@ zen-supporting .requirements {
 .zen-validate-html {
     font-size: 0;
   }
+
+  /* Shape Flower & Transitions */
+  .summary p abbr:before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-name: l-circle;
+  }
+
+  .summary p abbr:after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-name: l-circle;
+  }
+
+  .summary p:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 90px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-name: r-circle;
+  }
+
+  .summary:before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 90px;
+    width: 40px;
+    height: 40px;
+    background: #eca7a7;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-name: r-circle;
+  }
+
+  .summary:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 72px;
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    border-radius: 50px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-name: c-circle;
+  }
+
+  @keyframes c-circle {
+    from {
+      left: 72px;
+      background-color: #bae7e7;
+    }
+    to {
+      left: 172px;
+    }
+  }
+  @keyframes r-circle {
+    from {
+      left: 90px;
+    }
+    to {
+      left: 190px;
+    }
+  }
+  @keyframes l-circle {
+    from {
+      left: 50px;
+    }
+    to {
+      left: 150px;
+    }
+  }
 }
 @media only screen and (min-width: 70rem) {
   html {

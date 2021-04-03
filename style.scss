@@ -348,6 +348,62 @@
         .zen-validate-html {
             font-size: 0;
         }
+                /* Shape Flower & Transitions */
+                .summary p abbr:before {
+                    @include transition(40px,50px,$explanation-color);
+                    animation-name: l-circle;
+                }
+        
+                .summary p abbr:after {
+                    @include transition(0px,50px,$explanation-color);
+                    animation-name: l-circle;
+                }
+        
+                .summary p:before {
+                    @include transition(0px,90px,$explanation-color);
+                    animation-name: r-circle;
+                }
+        
+                .summary:before {
+                    @include transition(40px,90px,$explanation-color);
+                    animation-name: r-circle;
+                }
+        
+                .summary:after {
+                    @include transition(20px,72px,$flower-shape);
+                    animation-name: c-circle;
+                }
+        
+                @keyframes c-circle {
+                    from {
+                        left: 72px;
+                        background-color: $preamble-color;
+                    }
+        
+                    to {
+                        left: 172px;
+                    }
+                }
+        
+                @keyframes r-circle {
+                    from {
+                        left: 90px;
+                    }
+        
+                    to {
+                        left: 190px;
+                    }
+                }
+        
+                @keyframes l-circle {
+                    from {
+                        left: 50px;
+                    }
+        
+                    to {
+                        left: 150px;
+                    }
+                }
     }
 
     //Large
